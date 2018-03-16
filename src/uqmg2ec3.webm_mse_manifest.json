@@ -1,0 +1,13 @@
+{
+  "type": "video/webm;codecs=\"vp8\"",
+  "duration": 2000.000000,
+  "init": { "offset": 0, "size": 433},
+  "media": [
+    { "offset": 433, "size": 37266, "timecode": 0.000000 },
+    { "offset": 37699, "size": 37774, "timecode": 0.333000 },
+    { "offset": 75473, "size": 38650, "timecode": 0.667000 },
+    { "offset": 114123, "size": 36014, "timecode": 1.000000 },
+    { "offset": 150137, "size": 35847, "timecode": 1.333000 },
+    { "offset": 185984, "size": 35385, "timecode": 1.667000 }
+  ]
+}

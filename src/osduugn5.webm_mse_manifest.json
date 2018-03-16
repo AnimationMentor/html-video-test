@@ -1,0 +1,19 @@
+{
+  "type": "video/webm;codecs=\"vp8\"",
+  "duration": 2000.000000,
+  "init": { "offset": 0, "size": 433},
+  "media": [
+    { "offset": 433, "size": 38369, "timecode": 0.000000 },
+    { "offset": 38802, "size": 45883, "timecode": 0.167000 },
+    { "offset": 84685, "size": 41917, "timecode": 0.333000 },
+    { "offset": 126602, "size": 42807, "timecode": 0.500000 },
+    { "offset": 169409, "size": 41024, "timecode": 0.667000 },
+    { "offset": 210433, "size": 44940, "timecode": 0.833000 },
+    { "offset": 255373, "size": 43731, "timecode": 1.000000 },
+    { "offset": 299104, "size": 43131, "timecode": 1.167000 },
+    { "offset": 342235, "size": 41073, "timecode": 1.333000 },
+    { "offset": 383308, "size": 42986, "timecode": 1.500000 },
+    { "offset": 426294, "size": 42995, "timecode": 1.667000 },
+    { "offset": 469289, "size": 44031, "timecode": 1.833000 }
+  ]
+}
