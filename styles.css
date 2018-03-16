@@ -1,5 +1,7 @@
 body {
 	font-family: sans-serif;
+	background: #f7f7f7;
+	color: #101016;
 }
 
 .columns {
@@ -13,4 +15,20 @@ form {
 label {
 	display: inline-block;
 	width: 10em;
+}
+
+table {
+	background: #e6e6e6;
+	border-collapse: collapse;
+}
+
+th, td {
+	border: none;
+	padding: .3em 1em;
+	width: 13em;
+}
+
+th {
+	font-weight: bold;
+	border-bottom: 1px solid #bbb;
 }

@@ -31,45 +31,62 @@
 
 	<div class="columns">
 		<video crossorigin="use-credentials" autoplay loop src="" controls></video>
-
-		<div>
-			<label for="text__metadata">Metadata</label>
-			<textarea id="text__metadata" cols="80" rows="32" readonly></textarea>
-		</div>
+		<textarea id="text__metadata" cols="80" rows="32" readonly aria-label="Metadata"></textarea>
 	</div>
 
 
-	<dl>
-		<dt>Current time:</dt>
-		<dd><output id="output__currentTime"></output></dd>
-	</dl>
+	<table>
+		<thead>
+			<tr>
+				<th>Time</th>
+				<th>Frame</th>
+				<th>FPS</th>
+				<th>seconds per frame</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><output id="output__currentTime">-</output></td>
+				<td><output id="output__currentFrame">-</output></td>
+				<td><output id="output__frameRate">24</output></td>
+				<td><output id="output__frameDuration">-</output></td>
+			</tr>
+		</tbody>
+	</table>
 
 
 	<form id="seek__time" onsubmit="seekTime(event)">
-		<label for="input__time">Seek to time</label>
-		<input  id="input__time" type="number" step="0.000001" placeholder="0.000000" required>
+		<label for="input__time">Seek to seconds</label>
+		<input  id="input__time" type="number" step="0.000001" value="0.000000" required>
 		<button>Seek</button>
 	</form>
 
-	<form id="seek__frame">
+	<form id="seek__frame" onsubmit="seekFrame(event)">
 		<label for="input__frame">Seek to frame</label>
-		<input  id="input__frame" type="number" placeholder="1" required>
+		<input  id="input__frame" type="number" value="1" required>
 		<button>Seek</button>
+		<button type="button">-1</button>
+		<button type="button">+1</button>
 	</form>
 
-	<form id="seek__frame--tenth">
-		<label for="input__frame--tenth">Seek to frame + 0.1</label>
-		<input  id="input__frame--tenth" type="number" placeholder="1" required>
-		+ 0.1
+	<form id="seek__frame--tenth" onsubmit="seekFrameTenth(event)">
+		<label for="input__frame--tenth">Frame (+ tenth frame)</label>
+		<input  id="input__frame--tenth" type="number" value="1" required>
 		<button>Seek</button>
+		<button type="button">-1</button>
+		<button type="button">+1</button>
 	</form>
 
-	<form id="seek__frame--half">
-		<label for="input__frame--half">Seek to frame + 0.5</label>
-		<input  id="input__frame--half" type="number" placeholder="1" required>
-		+ 0.5
+	<form id="seek__frame--half" onsubmit="seekFrameHalf(event)">
+		<label for="input__frame--half">Frame (+ half frame)</label>
+		<input  id="input__frame--half" type="number" value="1" required>
 		<button>Seek</button>
+		<button type="button">-1</button>
+		<button type="button">+1</button>
 	</form>
+
+
+	<button type="reset" onclick="reset()">Reset</button>
 
 
 	<script src="video-seek.js"></script>
